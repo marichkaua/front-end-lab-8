@@ -1,0 +1,23 @@
+$headerspiccolor: #893c00;
+$formh3color: #808080;
+$tbcolor: #e0e0e0;
+$formdesigncolor: $formH3Color;
+$header1transform: none;
+$bodybbcolor: #fadcba;
+$textcolor: inherit;
+$captioncolor: inherit;
+$tbbcolor: inherit;
+$linkcolor: #3d70a1;
+$buttonbcolor: #ffffff;
+$thbcolor: $buttonBColor;
+@mixin brief
+{
+	background-color: $bodyBBColor;
+	float: left;
+	margin: 0px 20px 5px 0px;
+	padding: 15px;
+	width: 35%;
+}
+
+
+

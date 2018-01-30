@@ -1,0 +1,17 @@
+$headerspiccolor: #fccd10;
+$formh3color: inherit;
+$formdesigncolor: $headersPicColor;
+$linkcolor: $headersPicColor;
+$header1transform: uppercase;
+$bodybbcolor: rgba(198, 238, 252, 0.53);
+$textcolor: #ffffff;
+$buttonbcolor: #3b3b3b;
+$captioncolor: #000000;
+$tbcolor: #94a34e;
+$tbbcolor: #677d01;
+$thbcolor: $textColor;
+@mixin brief
+{
+	background-color: #fff178;
+	color: $buttonBColor;
+}

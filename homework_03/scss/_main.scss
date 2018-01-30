@@ -1,0 +1,124 @@
+body
+{
+	background-color: $bodyBBColor;
+	color: $textColor;
+}
+#content
+{
+	background-color: $buttonBColor;
+	color: $textColor;
+	margin: auto;
+	padding: 10px;
+	width: 70%;
+	a:link
+{
+		color: $linkColor;
+	}
+}
+h1
+{
+	text-align: center;
+	text-transform: $header1Transform;
+}
+h1, h2
+{
+	color: $headersPicColor;
+}
+h2:last-of-type
+{
+	margin-bottom: 0;
+}
+form h3
+{
+	color: $formH3Color;
+}
+html, body, ul, ol
+{
+	margin: 5px 60px;
+	padding: 0px;
+}
+.img-right, .img-left
+{
+	border: $headersPicColor solid;
+	padding: 2px;
+}
+.img-left
+{
+	float: left;
+	margin: 0 20px 0px 0px;
+}
+.img-right
+{
+	float: right;
+	margin: 10px 20px 0px 20px;
+}
+.brief
+{
+	@include brief;
+	margin: 0px 20px 5px 0px;
+	padding: 15px;
+}
+table
+{
+	border-collapse: collapse;
+	width: 98%;
+}
+th, td
+{
+	background-color: $tBBColor;
+	border-bottom: 1px solid;
+	border-color: $tBColor;
+	padding: 8px;
+	text-align: left;
+}
+th
+{
+	background-color: $tBColor;
+	border-bottom: none;
+	border-right: 1px solid $tHBColor;
+	color: initial;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+th:last-child
+{
+	border-right: none;
+}
+caption
+{
+	color: $captionColor;
+	text-align: right;
+}
+.username, .lastname
+{
+	display: inline-block;
+	width: 50%;
+}
+input, textarea, .email
+{
+	box-sizing: border-box;
+	color: #808080;
+	width: 100%;
+}
+button
+{
+	background-color: $buttonBColor;
+	border: 1px solid $linkColor;
+	color: $linkColor;
+	font-size: large;
+	height: 40px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	width: 200px;
+}
+.lastname
+{
+	float: right;
+	width: 49%;
+}
+form h3
+{
+	color: $formDesignColor;
+	font-weight: normal;
+	text-transform: uppercase;
+}
