@@ -1,0 +1,222 @@
+html {
+    font-family: "Helvetica", sans-serif;
+    box-sizing: border-box;
+}
+/*header*/
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns : 1fr 2fr;
+    grid-auto-rows: minmax(7vw, auto);
+}
+header a {
+    color: #464547;
+}
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 5% 0 0 60%;
+}
+.logo img {
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+}
+header nav {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 2% 0 0 0;
+    font-size: 1.4vw;
+    vertical-align: center;
+}
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li{
+    display: inline;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 1%;
+}
+header nav ul li a:hover {
+    color: #39c2d7;
+}
+/*banner*/
+#myArea {
+    grid-area: myArea;
+    display: grid;
+    grid-template-areas:'myArea';
+    background: url('../img/banner.jpg') no-repeat;
+    margin: 0%;
+    text-align: left;
+    max-width: 100%;
+    height: 378px;
+    background-position: center;
+}
+#myArea p {
+    color: #fff;
+    font-size: 1.4vw;
+    padding-top: 5%;
+    padding-left: 20%;
+    white-space: pre;
+}
+/*articles*/
+#articlesArea {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+#articlesArea article a {
+    text-decoration: none;
+    color: #000;
+}
+figure:hover {
+    background-color: #39c2d7;
+}
+figure {
+    background-color: grey;
+    padding: 3%;
+}
+figure img {
+    display: flex;
+    width: 100%;
+}
+/*footer*/
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns : 1fr 2fr;
+    grid-auto-rows: minmax(7vw, auto);
+    background-color: #39c2d7 ;
+    color: #fff;
+    text-align: left;
+    font-size: 1.4vw;
+    padding-left: 20%;
+    padding-top: 5%;
+    padding-bottom: 0%;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover {
+    text-decoration: none;
+}
+/*screens*/
+/*desktop*/
+@media screen and (max-width: 899px) {
+    header {
+        display: block;
+        text-align: center;
+   }
+    header nav {
+        grid-area: header;
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 2vw;
+   }
+    header nav img {
+        display: inline-block;
+   }
+    header a.logo {
+        padding-left: 5%;
+   }
+    #myArea p {
+        font-size: 2vw;
+        padding-left: 30%;
+        padding-right: 30%;
+        text-align: center;
+   }
+    #myArea p span {
+        white-space: normal;
+   }
+    #articlesArea {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+   }
+    figure img {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+   }
+    #articlesArea article figcaption h3,p {
+        margin: 1%;
+   }
+    footer {
+        font-size: 2vw;
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+   }
+    footer a {
+        display: inline-block;
+   }
+    footer div a:last-child {
+        padding-bottom: 10px;
+   }
+}
+/*tablet*/
+@media screen and (max-width: 574px) {
+    header {
+        padding: 0;
+        margin: 0;
+        grid-template: 0.5fr / 1fr;
+   }
+    header nav {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 4vw;
+   }
+    .logo {
+        padding:0;
+        text-align: center;
+   }
+    header nav ul li{
+        display: block;
+        background: #ccc;
+        border-top: grey solid 1px;
+   }
+    header nav ul {
+        padding: 0;
+   }
+    #myArea {
+        height: 300px;
+   }
+    #myArea p {
+        font-size: 4vw;
+        margin: 0 auto;
+        padding: 100px 0;
+        color: #fff;
+        width: 90%;
+   }
+    #myArea p span {
+        background-color:#39c2d7;
+        white-space: normal;
+        text-align: left;
+   }
+    #articlesArea {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+   }
+    footer {
+        font-size: 4vw;
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+   }
+    footer a {
+        display: block;
+   }
+    footer div a:last-child {
+        padding-bottom: 10px;
+   }
+}
