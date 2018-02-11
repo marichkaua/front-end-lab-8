@@ -2,8 +2,7 @@ var a = parseInt(prompt("Pls enter Side A"), 10);
 var b = parseInt(prompt("Pls enter Side B"), 10);
 var c = parseInt(prompt("Pls enter Side C"), 10);
 
-if ((a, b, c != '') ||
-    (isNaN(a, b, c) === false)) {
+if (isNaN(a + b + c)) {
     console.log("Incorrect data")
 } else {
     function getTriangleType(a, b, c) {
