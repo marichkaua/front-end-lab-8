@@ -14,10 +14,9 @@ while (playTheGame) {
     }
 
     assertedNumber = Math.floor(Math.random() * Math.floor(max));
-    console.log(assertedNumber, max);
 
     while (attemptsLeft) {
-        n = prompt("Enter a number between 0 and " + max + " \nAttempts left: " + attemptsLeft +
+        n = prompt("Enter a number from 0 to " + max + " \nAttempts left: " + attemptsLeft +
             "\nTotal prize: " + prize + "$" +
             "\nPossible prize on current attempt: " + currentPrize + "$");
 
@@ -29,16 +28,13 @@ while (playTheGame) {
             guessed = true;
             playTheGame = confirm("Do you want to continue the game?");
 
-            console.log("playthegame", playTheGame);
-
             if (playTheGame) {
                 attemptsLeft = 3;
                 max = max * 2;
                 maxPrize = maxPrize * 3;
                 currentPrize = maxPrize;
                 assertedNumber = Math.floor(Math.random() * Math.floor(max));
-                console.log(assertedNumber, max);
-
+                
                 continue;
             } else {
                 console.log('Thank you for a game. Your prize is: ' + prize + '$');
