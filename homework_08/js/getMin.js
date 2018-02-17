@@ -9,4 +9,4 @@ function getMin() {
     }
     return Math.min.apply(Math, mN);
 }
-console.log(getMin());
+
