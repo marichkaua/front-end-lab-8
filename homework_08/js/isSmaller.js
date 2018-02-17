@@ -7,4 +7,3 @@ function isBigger(a, b) {
 function isSmaller(a, b) {
     return !isBigger(a, b);
 } 
-console.log(isSmaller(a, b));
