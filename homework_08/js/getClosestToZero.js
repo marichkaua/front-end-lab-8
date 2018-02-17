@@ -9,5 +9,5 @@ function getClosestToZero() {
         }
     }
 
-    return Math.min.apply(-Math.abs(Math, mN));
+    return Math.min.apply(Math, mN);
 }
