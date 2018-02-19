@@ -1,4 +1,4 @@
-var i, k;
+var i, k, newNewArray;
 
 function newArray(array, someF) {
     var newNewArray = [];
