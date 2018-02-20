@@ -1,3 +1,8 @@
-function getTransformedArray (array, fnctn) {   
-    return forEach(array, fnctn);
+function getTransformedArray(arrayA, someF) {
+    var newArray = [];
+    forEach(arrayA, function(el) {
+        newArray.push(someF(el));
+    });
+    return newArray;
 }
+
