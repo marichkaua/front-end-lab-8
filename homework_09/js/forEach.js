@@ -1,8 +1,7 @@
-var i, array;
-array = [];
-
-function forEach(array, callfunc) {
-    for (i = 0; i < array.length; i++) {
-        callfunc(array[i]);
+function forEach (array, callfunc) { 
+    newArray = [];
+    for (i = 0; i < array.length; i ++) {
+    newArray.push(callfunc(array[i]));
     }
+    return newArray;
 }
