@@ -1,1 +1,26 @@
+.tree .is-folder > ul {
+    display: none;
+}
+.material-icons {
+    color: gray;
+    vertical-align: bottom;
+    font-size: 20px;
+}
+.is-folder > .material-icons {
+    color: darkgoldenrod 
+}
+.tree, .tree ul {
+    cursor: pointer;
+    list-style: none;
+}
+.tree .is-folder.is-open > ul {
+    display: block;
+}
+.tree .is-folder.is-empty.is-folder.is-open:after {
+    content: 'The folder is empty';
+    font-style: italic;
+    position: relative;
+    clear: both;
+    display: block;
+}
 
