@@ -36,18 +36,17 @@ var tanksList = (function tree(tanks) {
         container.appendChild(containerItem);
         parent.appendChild(container);
 
-        child.addEventListener('click', () => location.hash = item.model);
+        containerItem.addEventListener('click', () => showTankDetails(item.model));
 
     });
     return parent;
 
 })(tanks);
 
-function details(tank) {
+function getDetails(infoDate) {
+    var details = infoDate.details;
 
-    var details = tank.details;
     return ` <div class="details">
-
     <div class="mainInfo">
       <h1>
         <img class="flag" src="images/countries/${infoDate.country}.png" title="${infoDate.country}"/>${infoDate.model} (level ${infoDate.level})
@@ -56,8 +55,9 @@ function details(tank) {
        <img class="detflag" src="${infoDate.preview}">
        <span class="back">Back to list view</span>
        </div>
-      <div class="tableInfo">
-      <h1 class="preTable">Characteristic</h1>
+       <div class="tableInfo">
+       <h1 class="preTable">Characteristic</h1>
+
        <table>
         <tr>
             <th>
@@ -65,45 +65,39 @@ function details(tank) {
             </th>
             <th>
                 ${details.damage}
-
             </th>
         </tr>
-                <tr>
+           <tr>
             <th>
                 breoning
             </th>
             <th>
                 ${details.breoning}
-
             </th>
         </tr>
           <tr>
-           <th>
-               attack speed
+            <th>
+                attack speed
             </th>
             <th>
-
                 ${details.attack_speed}
-
-            </th>
-        </tr>
-        <tr>
-           <th>
-                time of targeting
-            </th>
-            <th>
-                ${details.time_of_targeting}
-
             </th>
         </tr>
          <tr>
-           <th>
-               ammunition
+            <th>
+                time of targeting
+            </th>
+            <th>
+               ${details.time_of_targeting}
+            </th>
+        </tr>
+          <tr>
+            <th>
+                ammunition
             </th>
             <th>
                 ${details.ammunition}
-
-           </th>
+            </th>
         </tr>
        </table>
       </div>
@@ -111,22 +105,20 @@ function details(tank) {
 
 }
 
-function tankDetails() {
-        var tModel = location.hash.slice(1);
+function showTankDetails(tModel) {
 
-        tanks.forEach(function(item) {
-            if (item.tModel === tModel) {
-                rootNode.innerHTML = details(item);
-            }
-        });
+    tanks.forEach(function(item) {
+        if (item.model === tModel) {
+            rootNode.innerHTML = getDetails(item);
+        }
+    });
+    var returnW = document.getElementsByClassName('back');
 
-        var returnW = document.getElementsByClassName('return');
-
-        containerItem.addEventListener('click', () => {
-            window.location.hash = '';
-            window.history.go();
-        });
-    }
-    //----------------------------------------------
+    returnW[0].addEventListener('click', () => {
+        location.hash = '';
+        window.history.go();
+    });
+}
+//----------------------------------------------
 rootNode.appendChild(tanksList);
 window.onhashchange = tankDetails;
